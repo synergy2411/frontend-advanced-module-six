@@ -37,7 +37,7 @@
 
 
 
-const colors = require("colors")
+
 const yargs = require("yargs")
 const { read, write } = require("./operations")
 
