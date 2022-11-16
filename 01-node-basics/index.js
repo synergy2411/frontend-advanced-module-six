@@ -1,10 +1,10 @@
-const fs = require("fs");
+// const fs = require("fs");
 
-const content = fs.readFileSync("./test.txt")           // << Data transfer over streams using buffer
+// const content = fs.readFileSync("./test.txt")           // << Data transfer over streams using buffer
 
-console.log(content.toString());
+// // console.log(content.toString());
 
-fs.writeFileSync("./test3.txt", content)
+// fs.writeFileSync("./test3.txt", content)
 
 
 // const path = require("path")
@@ -37,41 +37,54 @@ fs.writeFileSync("./test3.txt", content)
 
 
 
-// const colors = require("colors")
-// const yargs = require("yargs")
+const colors = require("colors")
+const yargs = require("yargs")
+const { read, write } = require("./operations")
 
-// // print
-// yargs.command({
-//     command: "print",
-//     description: "to print something",
-//     builder: {
-//         text: {
-//             type: "string",
-//             demandOption: true
-//         }
-//     },
-//     handler: function (args) {
-//         console.log("PRINTING : ", args.value)
-//     }
-// })
+// print
+yargs.command({
+    command: "print",
+    description: "to print something",
+    builder: {
+        text: {
+            type: "string",
+            demandOption: true
+        }
+    },
+    handler: function (args) {
+        console.log("PRINTING : ", args.value)
+    }
+})
 
-// // read
-// yargs.command({
-//     command: "read",
-//     description: "to read the content",
-//     builder: {
-//         title: {
-//             type: "string",
-//             demandOption: true
-//         }
-//     },
-//     handler: function (args) {
-//         console.log("TITLE : ", args.title);
-//     }
-// })
+// read
+yargs.command({
+    command: "read",
+    description: "to read the content",
+    builder: {
+        title: {
+            type: "string",
+            demandOption: true
+        }
+    },
+    handler: function (args) {
+        // fs.writeFileSync("./test.txt", args.title)
+        read(args.title)
+        console.log("TITLE : ", args.title);
+    }
+})
 
+// write
+yargs.command({
+    command: "write",
+    description: "to write to console",
+    handler: function () {
+        // const content = fs.readFileSync("./test.txt")
+        write()
+        // console.log("WRITE : ", content.toString());
+    }
+})
 
-// yargs.parse()
+yargs.parse()
 
 // // console.log("HEllo World".red);
 // // console.log("HEllo World".green);

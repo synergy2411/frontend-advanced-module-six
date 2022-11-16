@@ -35,3 +35,19 @@
 > node index --help
 > node index read --help
 > node index read --title="shopping"
+
+> Store the title in test.txt file
+
+- Create 'write' command - NO builder NEEDED
+- read the data from test.txt and write it on the console
+- print the title in the console
+
+'read' -> accepting input from user and soring in the file (test.txt)
+
+'write' -> read the data from test.txt and write it on the console
+
+## External Modules
+
+## Built-in / Native Modules
+
+## File Module
