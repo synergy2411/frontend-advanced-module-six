@@ -51,3 +51,21 @@
 ## Built-in / Native Modules
 
 ## File Module
+
+# Semantic Versioning - X.Y.Z (semver.org)
+
+- X : Major Version > add new features which is NOT backward compatible
+- Y : Minor Version > add new features which is backward compatible
+- Z : Patch Version > for bug fixes and code improvements
+
+v1.0.0
+v1.0.1
+v1.1.0
+v1.1.1
+v2.0.0
+
+> npm init
+> npm install chalk@2.2.2
+> npm outdated
+> npm update
+> npm install chalk@latest

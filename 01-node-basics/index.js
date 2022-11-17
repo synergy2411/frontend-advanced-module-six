@@ -38,55 +38,69 @@
 
 
 
-const yargs = require("yargs")
-const { read, write } = require("./operations")
+// const yargs = require("yargs")
+// const { read, write } = require("./operations")
 
-// print
-yargs.command({
-    command: "print",
-    description: "to print something",
-    builder: {
-        text: {
-            type: "string",
-            demandOption: true
-        }
-    },
-    handler: function (args) {
-        console.log("PRINTING : ", args.value)
-    }
-})
+// // print
+// yargs.command({
+//     command: "print",
+//     description: "to print something",
+//     builder: {
+//         text: {
+//             type: "string",
+//             demandOption: true
+//         }
+//     },
+//     handler: function (args) {
+//         console.log("PRINTING : ", args.value)
+//     }
+// })
 
-// read
-yargs.command({
-    command: "read",
-    description: "to read the content",
-    builder: {
-        title: {
-            type: "string",
-            demandOption: true
-        }
-    },
-    handler: function (args) {
-        // fs.writeFileSync("./test.txt", args.title)
-        read(args.title)
-        console.log("TITLE : ", args.title);
-    }
-})
+// // read
+// yargs.command({
+//     command: "read",
+//     description: "to read the content",
+//     builder: {
+//         title: {
+//             type: "string",
+//             demandOption: true
+//         }
+//     },
+//     handler: function (args) {
+//         // fs.writeFileSync("./test.txt", args.title)
+//         read(args.title)
+//         console.log("TITLE : ", args.title);
+//     }
+// })
 
-// write
-yargs.command({
-    command: "write",
-    description: "to write to console",
-    handler: function () {
-        // const content = fs.readFileSync("./test.txt")
-        write()
-        // console.log("WRITE : ", content.toString());
-    }
-})
+// // write
+// yargs.command({
+//     command: "write",
+//     description: "to write to console",
+//     handler: function () {
+//         // const content = fs.readFileSync("./test.txt")
+//         write()
+//         // console.log("WRITE : ", content.toString());
+//     }
+// })
 
-yargs.parse()
+// yargs.parse()
 
 // // console.log("HEllo World".red);
 // // console.log("HEllo World".green);
 // // console.log("HEllo World".inverse);
 // // console.log("HEllo World".rainbow);
+
+
+
+
+
+// const os = require("os")
+//         // built-in Module <<<
+
+// require("./operations")     // <<< file module
+
+
+// require("colors")           // 3rd Party / External module
+
+// require("yargs")        // <<< external module
