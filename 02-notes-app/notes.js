@@ -27,6 +27,43 @@ const addNote = (title, body) => {
     saveNote(notes);
 }
 
+const readNote = (title) => {
+    const notes = loadNotes();
+    const position = notes.findIndex(n => n.title === title)
+    if (position >= 0) {
+        console.log("TITLE : ", notes[position].title)
+        console.log("BODY : ", notes[position].body)
+        return;
+    }
+    console.log("Unable to find Note for title -", title);
+}
+
+const removeNote = title => {
+    const notes = loadNotes();
+    const position = notes.findIndex(n => n.title === title)
+    if (position >= 0) {
+        // const filteredNotes = notes.filter(n => n.title !== title);
+        // saveNote(filteredNotes)
+        notes.splice(position, 1)
+        saveNote(notes)
+        return;
+    }
+    console.log(("Unable to find title - " + title).red);
+}
+
+const listNotes = () => {
+    const notes = loadNotes();
+    console.log("LISTING ALL NOTES".grey);
+    notes.forEach(note => {
+        console.log("-------------".blue);
+        console.log(("Title : " + note.title).grey);
+        console.log(("Body : " + note.body).grey);
+    })
+}
+
 module.exports = {
-    addNote
+    addNote,
+    readNote,
+    removeNote,
+    listNotes
 }
