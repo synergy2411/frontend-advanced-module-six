@@ -69,3 +69,37 @@ v2.0.0
 > npm outdated
 > npm update
 > npm install chalk@latest
+> npm install @babel/core -D << install packages as devDependency locally in project
+> npm install json-server -g << install packages in global environment of machine
+> npm ls --depth 0
+> npm search [searchTerm]
+> npm config get | set [configuration]
+
+    - set init-author-name="Your_Name"
+    - set init-version=0.0.1
+    - npm config list --json
+    - generate package.json again
+
+> npm adduser << adds you as user on NPM registry
+> npm publish << publish the project on NPM registry
+> npm unpublish << unpublish the project from NPM registry
+
+## Steps to upload the module
+
+create a module to export the random number (1-100) and publish it;
+
+Verify the package is published (https://registry.npmjs.org/)
+
+create another project to install the package
+
+use the random number functionality
+
+# Dependency : 3rd party packages invloved in development as well in production environment
+
+# DevDependency : 3rd party packages involved in development only; Will be removed automatically in production environment
+
+- npm init -
+- npm i @babel/core @babel/cli @babel/preset-env -D
+- npm i nodemon -D
+- Change the script in package json file
+- run the script > npm run dev:start

@@ -1,21 +1,16 @@
 {
-  "name": "my-awesome-packages-name",
-  "version": "0.0.1",
-  "description": "Just for fun",
+  "name": "sk-deloitte-maths",
+  "version": "1.0.0",
+  "description": "math functionalities",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "awesome",
-    "package",
-    "sumitk",
+    "sk",
+    "math",
     "deloitte"
   ],
-  "author": "SumitK",
-  "license": "ISC",
-  "dependencies": {
-    "chalk": "^5.1.2",
-    "yargs": "^15.4.1"
-  }
+  "author": "Sumit Khandelwal",
+  "license": "ISC"
 }

@@ -17,3 +17,14 @@
 
 
 // console.log(process.argv);               // <<< tons of properties about the nodejs process
+
+
+
+const sum = (n1, n2) => n1 + n2;
+
+const mul = (n1) => n1 * n1;
+
+module.exports = {
+    sum,
+    mul
+}
