@@ -103,3 +103,34 @@ use the random number functionality
 - npm i nodemon -D
 - Change the script in package json file
 - run the script > npm run dev:start
+
+# Webpack DEMO
+
+- npm init -y
+- npm install webpack webpack-cli -D
+- npm install @babel/core @babel/cli @babel/preset-env -D
+- src/index.js
+- webpack.config.js file -> configuration
+- create "build" script in package json file
+- run the script > npm run build
+
+## Configuing webpack-dev-server
+
+- live-server : 5500 | webpack-dev-server : 8080
+- npm install webpack-dev-server -D
+- npm install html-webpack-plugin -D
+- Configure "plugins" in webpack.config.js file
+- create new script "dev-serve"
+- run the script > npm run dev-serve
+
+## to load CSS as module
+
+- npm install style-loader css-loader -D
+- configure webpack-config.js file
+- import css file in javascript
+
+## to load babel config
+
+- npm install babel-loader -D [@babel/core, @babel/cli, @babel/preset-env]
+- configure webpack-config.js file
+- import JS file in javascript
