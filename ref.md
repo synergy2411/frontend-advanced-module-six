@@ -134,3 +134,48 @@ use the random number functionality
 - npm install babel-loader -D [@babel/core, @babel/cli, @babel/preset-env]
 - configure webpack-config.js file
 - import JS file in javascript
+
+# GIT Stages
+
+1. Modified
+2. Staging > index file > git add t1.txt
+3. Commit > Object folder > git commit -m "added t1.txt file"
+
+# GIT Commands
+
+- git init
+- git add <filename>
+- git commit -m ""
+- git log           << to check the commits made
+- git status
+- git config --global user.name ""
+- git config --global user.email ""
+- git checkout <commitID> << detech the HEAD
+
+- git branch <branchName>
+- git switch <branchName>
+
+OR
+
+- git checkout -b <branchName>
+
+
+- create a new branch feature
+- create new file in feature branch
+- check the head in feature as well as in master
+- merge both the branches
+
+
+
+
+# DELETING DATA
+- File from WD
+    > git rm <filename>
+- Data from Unstaged area
+    > git restore <filename>
+- Data from Staged area
+    > git restore --staged <filename>
+    > git restore <filename>
+- Data from Commit area
+    > git reset HEAD~1
+    > git restore <filename>
